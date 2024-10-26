@@ -5,15 +5,14 @@ print('Enter length of massive:', end=' ')
 n = int(input())
 s = 0
 if n > 0:
-    M = [randint(0, 100)
-        for i in range(0, n)]
-    print(M)
+    M = [randint(1, 100)
+         for x in range(0, n)]
+    m = M[0]
     for i in range(1, n):
-        if M[i-1] < M[i]:
+        if m < M[i]:
             m = M[i]
-        else:
-            m = M[0]
-    for i in range(0, n):
-        if M[i] == m:
-            s +=1
-    print(s)
+        elif m == M[i]:
+            s += 1
+    print(M, m, s)
+else:
+    print('Error: n > 0')
