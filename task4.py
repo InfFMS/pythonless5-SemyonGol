@@ -16,7 +16,7 @@ if n > 0:
     s = s/n
     B = []
     for i in range(0, n):
-        if M[i]*0.3 > s or M[i]*1.3 < s:
+        if (M[i] < 0.7*s) or (M[i] > 1.3*s):
             B = B + [M[i]]
     for i in range(0, len(B)):
         M.remove(B[i])

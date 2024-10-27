@@ -7,11 +7,9 @@ s = 0
 if n > 0:
     M = [randint(1, 100)
          for x in range(0, n)]
-    m = M[0]
-    for i in range(1, n):
-        if m < M[i]:
-            m = M[i]
-        elif m == M[i]:
+    m = max(M)
+    for i in range(0, n):
+        if m == M[i]:
             s += 1
     print(M, m, s)
 else:
