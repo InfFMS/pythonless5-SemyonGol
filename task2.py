@@ -7,3 +7,19 @@
 # Вывод:
 # значение:3 индексы 2 и 3
 # значение:2 индексы 4 и 5
+from random import randint
+print('Enter length of massive:', end=' ')
+n = int(input())
+b = False
+if n > 0:
+    A = [randint(0, 5)
+         for x in range(n)]
+    for i in range(1, n):
+        if A[i - 1] == A[i]:
+            print('Value of equal elements:', A[i],'Indexes:',i - 1, 'and', i)
+            b = True
+    if not(b):
+        print('Нет')
+    print(A)
+else:
+    print('Error: n > 0')
